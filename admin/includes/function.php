@@ -7,7 +7,13 @@ function classAutoLoader($class){
     
     if(is_file($the_path) && !class_exists($class)){
         require_once($the_path);
+    } else {
+        die("This file named {$class}.php was not found!");
     }
+}
+
+function redirect($location) {
+    header("Location: {$location}");
 }
 
 spl_autoload_register('classAutoLoader');
