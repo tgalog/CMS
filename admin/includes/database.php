@@ -46,7 +46,7 @@ class Database
     public function escape_string($string)
     {
         
-        $escape_string = $this->connnection->real_escape_string($string);//<-- method in mysqli class ref.: http://php.net/manual/en/mysqli.real-escape-string.php
+        $escape_string = $this->connection->real_escape_string($string);//<-- method in mysqli class ref.: http://php.net/manual/en/mysqli.real-escape-string.php
         return $escape_string;
     }
     
