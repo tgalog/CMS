@@ -39,7 +39,7 @@ class Database
     {
         if(!$result) {
             
-            die('Query Failed' . 'Database failed (' . $this->connection->connect_errno . ')' . $this->connection->connect_error);
+            die('Query Failed' . ' Database failed (' . $this->connection->connect_errno . ')' . $this->connection->connect_error);
         }
     }
     

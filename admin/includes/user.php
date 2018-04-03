@@ -1,12 +1,12 @@
 <?php
 
 class User 
-{
-    
+{    
     public $user_id;
     public $username;
     public $firstname;
     public $lastname;
+    public $password;
     
     public static function find_this_query($sql)
     {
@@ -31,7 +31,7 @@ class User
         $sql = "SELECT * FROM users WHERE ";
         $sql .= "username = '{$username}' ";
         $sql .= "AND password = '{$password}' ";
-        $sql .= "LIMIT=1";
+        $sql .= "LIMIT 1";
         
         $the_result_array = self::find_this_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
